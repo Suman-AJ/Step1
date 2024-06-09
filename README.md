@@ -152,3 +152,35 @@ Contains the main method to run the game.
 
    ```bash
    javac Main.java game/MagicalArena.java game/Player.java
+
+## Output 
+- ![Output](/Images/Output.png)
+
+- ## Combat Mechanics:
+    
+    - **1.Attack Calculation:**
+
+        - The attacker's attack value is multiplied by the  dice roll result to determine the total   attack damage.
+          
+          Total Attack Damage =Attack x  Dice Roll
+          
+      
+    - **2.Defense Calculation:**
+
+         - The defender's strength value is multiplied by the dice roll result to determine the total defense value.
+      
+         -  Total Defense Value=Strength×Dice Roll
+         
+    - **3.Damage Calculation:**
+
+        -  The actual damage dealt to the defender is the    difference between the total attack damage  and the total defense value. If this value is negative, the damage dealt is zero.
+         
+         - Damage Dealt=max(0,Total Attack Damage−Total Defense Value)
+          
+    - **4.Health Update:**
+
+       - The defender's health is reduced by the damage dealt.
+
+- ## Conclusion:
+     - The game ends when Player B's health drops to -10.
+     - Winner: Player A wins the game.
